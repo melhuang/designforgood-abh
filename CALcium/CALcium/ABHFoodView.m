@@ -16,9 +16,10 @@
 
 @implementation ABHFoodView
 
-- (id)initWithDelegate:(id<UITextFieldDelegate>)delegate {
+- (id)initWithDelegate:(id<ABHFoodViewDelegate>)delegate {
     if (self) {
         self = [super init];
+        self.delegate = delegate;
         [self createSubviews];
     }
     self.alphaView = [[UIView alloc] init];
@@ -32,7 +33,6 @@
     [self addSubview:_bgView];
     [self sendSubviewToBack:_bgView];
 
-    self.delegate = delegate;
     self.messageLabel.delegate = delegate;
     self.searchTextField.delegate = delegate;
     [self setNeedsUpdateConstraints];
@@ -53,10 +53,18 @@
     [self addSubview:_recordButton];
     
     _searchTextField = [[UITextField alloc] init];
-    _searchTextField.text = @"temp";
+    _searchTextField.text = @"";
     _searchTextField.font = [UIFont fontWithName:@"Helvetica" size:30];
     _searchTextField.textColor = [UIColor whiteColor];
     [self addSubview:_searchTextField];
+    
+    _totalRDA = [[UILabel alloc] init];
+    NSString *stringRDA = @"Total RDA: ";
+    stringRDA = [stringRDA stringByAppendingString:[[NSNumber numberWithFloat:self.delegate.RDA] stringValue]];
+    _totalRDA.text = stringRDA;
+    _totalRDA.font = [UIFont fontWithName:@"Helvetica" size:12];
+    _totalRDA.textColor = [UIColor whiteColor];
+    [self addSubview:_totalRDA];
     
     _progressBar = [[YLProgressBar alloc] init];
     _progressBar.type                     = YLProgressBarTypeFlat;
@@ -118,6 +126,11 @@
         make.centerX.equalTo(@0);
         make.width.equalTo(@300);
         make.height.equalTo(@20);
+    }];
+    
+    [_totalRDA mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.progressBar.mas_right).with.offset(0);
+        make.top.equalTo(self.progressBar.mas_bottom).with.offset(5);
     }];
 
     [super updateConstraints];

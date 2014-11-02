@@ -7,6 +7,7 @@
 //
 
 #import "ABHFoodViewController.h"
+#import "ABHCongratsViewController.h"
 #import "ABHFoodView.h"
 #import "AppDelegate.h"
 
@@ -109,9 +110,18 @@ const unsigned char SpeechKitApplicationKey[] = {0x59, 0xad, 0xf3, 0x73, 0xfe, 0
         calcium = 225;
     } else if ([food isEqualToString:@"Broccoli"]) {
         calcium = 20;
+    } else if ([food isEqualToString:@"Sardines"]) {
+        calcium = 325;
+    } else if ([food isEqualToString:@"Cheese pizza"]) {
+        calcium = 300;
+    } else if ([food isEqualToString:@"Magic"]) {
+        calcium = 2000;
     }
     self.calciumTotal += calcium;
-
+    if (self.calciumTotal > self.RDA) {
+        ABHCongratsViewController *congratsViewController = [[ABHCongratsViewController alloc] init];
+        [self presentViewController:congratsViewController animated:YES completion:nil];
+    }
     [self.view.progressBar setProgress:(self.calciumTotal / self.RDA) animated:YES];
 }
 

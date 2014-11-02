@@ -14,6 +14,7 @@
 		BA2C17451A05AE510036F614 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA2C17431A05AE510036F614 /* LaunchScreen.xib */; };
 		BA2C17511A05AE510036F614 /* CALciumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C17501A05AE510036F614 /* CALciumTests.m */; };
 		BA2C175C1A05B16E0036F614 /* ABHRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C175B1A05B16E0036F614 /* ABHRootViewController.m */; };
+		BA2C17601A05B2470036F614 /* ABHRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C175F1A05B2470036F614 /* ABHRootView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,8 @@
 		BA2C17501A05AE510036F614 /* CALciumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALciumTests.m; sourceTree = "<group>"; };
 		BA2C175A1A05B16E0036F614 /* ABHRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABHRootViewController.h; sourceTree = "<group>"; };
 		BA2C175B1A05B16E0036F614 /* ABHRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABHRootViewController.m; sourceTree = "<group>"; };
+		BA2C175E1A05B2470036F614 /* ABHRootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABHRootView.h; sourceTree = "<group>"; };
+		BA2C175F1A05B2470036F614 /* ABHRootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABHRootView.m; sourceTree = "<group>"; };
 		BA99F566CD5C9AD73B6B0ADA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,8 +98,7 @@
 		BA2C17331A05AE510036F614 /* CALcium */ = {
 			isa = PBXGroup;
 			children = (
-				BA2C175A1A05B16E0036F614 /* ABHRootViewController.h */,
-				BA2C175B1A05B16E0036F614 /* ABHRootViewController.m */,
+				BA2C175D1A05B2270036F614 /* Root */,
 				BA2C17381A05AE510036F614 /* AppDelegate.h */,
 				BA2C17391A05AE510036F614 /* AppDelegate.m */,
 				BA2C17411A05AE510036F614 /* Images.xcassets */,
@@ -130,6 +132,17 @@
 				BA2C174F1A05AE510036F614 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA2C175D1A05B2270036F614 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				BA2C175A1A05B16E0036F614 /* ABHRootViewController.h */,
+				BA2C175B1A05B16E0036F614 /* ABHRootViewController.m */,
+				BA2C175E1A05B2470036F614 /* ABHRootView.h */,
+				BA2C175F1A05B2470036F614 /* ABHRootView.m */,
+			);
+			name = Root;
 			sourceTree = "<group>";
 		};
 		EC91CEB433F060E3CC34B53E /* Frameworks */ = {
@@ -276,6 +289,7 @@
 			files = (
 				BA2C173A1A05AE510036F614 /* AppDelegate.m in Sources */,
 				BA2C175C1A05B16E0036F614 /* ABHRootViewController.m in Sources */,
+				BA2C17601A05B2470036F614 /* ABHRootView.m in Sources */,
 				BA2C17371A05AE510036F614 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

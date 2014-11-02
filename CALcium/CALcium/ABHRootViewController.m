@@ -22,7 +22,9 @@
 
 - (void)loadView {
     [super loadView];
-    self.view = [[ABHRootView alloc] init];
+    ABHRootView *childView = [[ABHRootView alloc] init];
+    childView.parent = self;
+    self.view = childView;
 }
 
 - (void)didReceiveMemoryWarning {

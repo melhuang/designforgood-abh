@@ -8,6 +8,7 @@
 
 #import "ABHRootView.h"
 #import "Masonry.h"
+#import "ABHFoodViewController.h"
 
 @interface ABHRootView ()
 
@@ -160,6 +161,8 @@ UIButton *group6;
             }
         }
     }
+    ABHFoodViewController *foodViewController = [[ABHFoodViewController alloc] init];
+    [self.parent presentViewController:foodViewController animated:YES completion:nil];
 }
 
 - (void)updateConstraints {

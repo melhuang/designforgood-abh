@@ -11,6 +11,7 @@
 @interface ABHRootView : UIView
 
 @property (nonatomic) int RDA;
+@property (nonatomic) UIViewController *parent;
 
 - (void)setRDAWithButton:(id)sender;
 

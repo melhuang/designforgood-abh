@@ -16,6 +16,8 @@
 		BA2C175C1A05B16E0036F614 /* ABHRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C175B1A05B16E0036F614 /* ABHRootViewController.m */; };
 		BA2C17601A05B2470036F614 /* ABHRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C175F1A05B2470036F614 /* ABHRootView.m */; };
 		BA2C17641A05DA930036F614 /* ABHFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C17631A05DA930036F614 /* ABHFoodViewController.m */; };
+		BA2C17671A05DC2D0036F614 /* ABHFoodView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C17661A05DC2D0036F614 /* ABHFoodView.m */; };
+		BA2C17691A05E0FA0036F614 /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2C17681A05E0FA0036F614 /* SpeechKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,9 @@
 		BA2C175F1A05B2470036F614 /* ABHRootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABHRootView.m; sourceTree = "<group>"; };
 		BA2C17621A05DA930036F614 /* ABHFoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABHFoodViewController.h; sourceTree = "<group>"; };
 		BA2C17631A05DA930036F614 /* ABHFoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABHFoodViewController.m; sourceTree = "<group>"; };
+		BA2C17651A05DC2D0036F614 /* ABHFoodView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABHFoodView.h; sourceTree = "<group>"; };
+		BA2C17661A05DC2D0036F614 /* ABHFoodView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABHFoodView.m; sourceTree = "<group>"; };
+		BA2C17681A05E0FA0036F614 /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechKit.framework; path = ../../DragonMobileSDK_1.4.12/DragonMobileVocalizer/SpeechKit.framework; sourceTree = "<group>"; };
 		BA99F566CD5C9AD73B6B0ADA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA2C17691A05E0FA0036F614 /* SpeechKit.framework in Frameworks */,
 				3981BFD9C9ED21BE184BFE1F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +160,8 @@
 			children = (
 				BA2C17621A05DA930036F614 /* ABHFoodViewController.h */,
 				BA2C17631A05DA930036F614 /* ABHFoodViewController.m */,
+				BA2C17651A05DC2D0036F614 /* ABHFoodView.h */,
+				BA2C17661A05DC2D0036F614 /* ABHFoodView.m */,
 			);
 			name = Food;
 			sourceTree = "<group>";
@@ -161,6 +169,7 @@
 		EC91CEB433F060E3CC34B53E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA2C17681A05E0FA0036F614 /* SpeechKit.framework */,
 				63CF5CF9A2A220EA12DDF1B9 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -300,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA2C17671A05DC2D0036F614 /* ABHFoodView.m in Sources */,
 				BA2C173A1A05AE510036F614 /* AppDelegate.m in Sources */,
 				BA2C175C1A05B16E0036F614 /* ABHRootViewController.m in Sources */,
 				BA2C17641A05DA930036F614 /* ABHFoodViewController.m in Sources */,
@@ -421,6 +431,10 @@
 			baseConfigurationReference = 233086640F13F532F6388F10 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/melissahuang/Documents/Blueprint/DragonMobileSDK_1.4.12/DragonMobileVocalizer,
+				);
 				INFOPLIST_FILE = CALcium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -432,6 +446,10 @@
 			baseConfigurationReference = BA99F566CD5C9AD73B6B0ADA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/melissahuang/Documents/Blueprint/DragonMobileSDK_1.4.12/DragonMobileVocalizer,
+				);
 				INFOPLIST_FILE = CALcium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

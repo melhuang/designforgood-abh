@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YLProgressBar.h"
 
 @interface ABHFoodView : UIView
 
@@ -14,6 +15,7 @@
 @property (nonatomic) id delegate;
 @property (nonatomic) UIButton *recordButton;
 @property (nonatomic) UITextField *searchTextField;
+@property (nonatomic) YLProgressBar *progressBar;
 
 - (id)initWithDelegate:(id<UITextFieldDelegate>)delegate;
 

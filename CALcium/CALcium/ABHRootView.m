@@ -130,31 +130,36 @@ UIButton *group6;
 
 - (void)setRDAWithButton:(UIButton *)sender {
     long hypenIndex = ((NSRange)[sender.titleLabel.text rangeOfString:@"-"]).location;
-    char before = [sender.titleLabel.text characterAtIndex:hypenIndex - 1];
-    if (before == '9') {
-        if ([sender.titleLabel.text characterAtIndex:hypenIndex - 2] != '1') {
-            self.RDA = 1300; //9-18
-        } else {
-            self.RDA = 1000; //19-50p
-        }
-    } else if (before == '1') {
-        if (((NSRange)[sender.titleLabel.text rangeOfString:@"M"]).location != -1) {
-            self.RDA = 1000; //man
-        } else {
-            if (((NSRange)[sender.titleLabel.text rangeOfString:@"W"]).location != -1) {
-                self.RDA = 1200; //woman
+    if (hypenIndex > sender.titleLabel.text.length) {
+        self.RDA = 1200; //71+
+    } else {
+        char before = [sender.titleLabel.text characterAtIndex:hypenIndex - 1];
+        char after = [sender.titleLabel.text characterAtIndex:hypenIndex + 1];
+        if (before == '9') {
+            if ([sender.titleLabel.text characterAtIndex:hypenIndex - 2] != '1') {
+                self.RDA = 1300; //9-18
             } else {
-                self.RDA = 700; //1 -3
+                self.RDA = 1000; //19-50p
+            }
+        } else if (before == '1') {
+            if (after == '3') {
+                self.RDA = 700;
+            } else {
+                char gender = [sender.titleLabel.text characterAtIndex:hypenIndex + 4];
+                if (gender == 'M') {
+                    self.RDA = 1000;
+                } else {
+                    self.RDA = 1200;
+                }
+            }
+        } else if (before == '1') {
+            if ([sender.titleLabel.text characterAtIndex:hypenIndex - 2] != '1') {
+                self.RDA = 1000; //4-8
+            } else {
+                self.RDA = 1300; //14-18p
             }
         }
-    } else if (before == '1') {
-        if ([sender.titleLabel.text characterAtIndex:hypenIndex - 2] != '1') {
-            self.RDA = 1000; //4-8
-        } else {
-            self.RDA = 1300; //14-18p
-        }
     }
-    
 }
 
 - (void)updateConstraints {

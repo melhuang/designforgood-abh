@@ -23,7 +23,7 @@
                   delegate:nil];
     
     // Set earcons to play
-    SKEarcon* earconStart	= [SKEarcon earconWithName:@"earcon_listening.wav"];
+    SKEarcon* earconStart	= [SKEarcon earconWithName:@"eat_question1.wav"];
     SKEarcon* earconStop	= [SKEarcon earconWithName:@"earcon_done_listening.wav"];
     SKEarcon* earconCancel	= [SKEarcon earconWithName:@"earcon_cancel.wav"];
     

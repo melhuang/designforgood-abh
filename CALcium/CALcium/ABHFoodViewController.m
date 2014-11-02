@@ -12,10 +12,8 @@
 
 @interface ABHFoodViewController ()
 
-@property (nonatomic) UILabel *messageLabel;
+@property (nonatomic) ABHFoodView *view;
 @property (nonatomic) id appDelegate;
-@property (nonatomic) UIButton *recordButton;
-@property (nonatomic) UILabel *searchTextField;
 
 @end
 
@@ -29,25 +27,20 @@ const unsigned char SpeechKitApplicationKey[] = {0x59, 0xad, 0xf3, 0x73, 0xfe, 0
     [super viewDidLoad];
     
     
-    self.messageLabel.text = @"Tap on the mic";
-//    self.activityIndicator.hidden = YES;
-//    
-//    if (!self.tableViewDisplayDataArray) {
-//        self.tableViewDisplayDataArray = [[NSMutableArray alloc] init];
-//    }
+    self.view.messageLabel.text = @"Tap on the mic";
     
     self.appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
     [self.appDelegate setupSpeechKitConnection];
     
-//    self.searchTextField.returnKeyType = UIReturnKeySearch;
 }
 
 
+
 - (void)recordButtonTapped:(id)sender {
-    self.recordButton.selected = !self.recordButton.isSelected;
+    self.view.recordButton.selected = !self.view.recordButton.isSelected;
     
     // This will initialize a new speech recognizer instance
-    if (self.recordButton.isSelected) {
+    if (self.view.recordButton.isSelected) {
         self.voiceSearch = [[SKRecognizer alloc] initWithType:SKSearchRecognizerType
                                                     detection:SKShortEndOfSpeechDetection
                                                      language:@"en_US"
@@ -64,22 +57,8 @@ const unsigned char SpeechKitApplicationKey[] = {0x59, 0xad, 0xf3, 0x73, 0xfe, 0
 }
 
 - (void)loadView {
-//    self.view = [[ABHFoodView alloc] init];
-    self.view = [[UIView alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    _messageLabel = [[UILabel alloc] init];
-    _messageLabel.text = @"message label";
-    [self.view addSubview:_messageLabel];
-    
-    _recordButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [_recordButton setTitle:@"record button" forState:UIControlStateNormal];
-    [_recordButton addTarget:self action:@selector(recordButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_recordButton];
-    
-    _searchTextField = [[UILabel alloc] init];
-    _searchTextField.text = @"search";
-    [self.view addSubview:_searchTextField];
+    self.view = [[ABHFoodView alloc] initWithDelegate:self];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -90,11 +69,11 @@ const unsigned char SpeechKitApplicationKey[] = {0x59, 0xad, 0xf3, 0x73, 0xfe, 0
 # pragma mark - SKRecognizer Delegate Methods
 
 - (void)recognizerDidBeginRecording:(SKRecognizer *)recognizer {
-    self.messageLabel.text = @"Listening..";
+    self.view.messageLabel.text = @"Listening...";
 }
 
 - (void)recognizerDidFinishRecording:(SKRecognizer *)recognizer {
-    self.messageLabel.text = @"Done Listening..";
+    self.view.messageLabel.text = @"Done Listening.";
 }
 
 - (void)recognizer:(SKRecognizer *)recognizer didFinishWithResults:(SKRecognition *)results {
@@ -102,10 +81,10 @@ const unsigned char SpeechKitApplicationKey[] = {0x59, 0xad, 0xf3, 0x73, 0xfe, 0
     
     if (numOfResults > 0) {
         // update the text of text field with best result from SpeechKit
-        self.searchTextField.text = [results firstResult];
+        self.view.searchTextField.text = [results firstResult];
     }
     
-    self.recordButton.selected = !self.recordButton.isSelected;
+    self.view.recordButton.selected = !self.view.recordButton.isSelected;
     
     if (self.voiceSearch) {
         [self.voiceSearch cancel];
@@ -114,8 +93,8 @@ const unsigned char SpeechKitApplicationKey[] = {0x59, 0xad, 0xf3, 0x73, 0xfe, 0
 
 
 - (void)recognizer:(SKRecognizer *)recognizer didFinishWithError:(NSError *)error suggestion:(NSString *)suggestion {
-    self.recordButton.selected = NO;
-    self.messageLabel.text = @"Connection error";
+    self.view.recordButton.selected = NO;
+    self.view.messageLabel.text = @"Connection error";
 //    self.activityIndicator.hidden = YES;
     
     

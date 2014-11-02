@@ -10,4 +10,11 @@
 
 @interface ABHFoodView : UIView
 
+@property (nonatomic) UITextField *messageLabel;
+@property (nonatomic) id delegate;
+@property (nonatomic) UIButton *recordButton;
+@property (nonatomic) UITextField *searchTextField;
+
+- (id)initWithDelegate:(id<UITextFieldDelegate>)delegate;
+
 @end

@@ -20,20 +20,27 @@
     if (self) {
         self = [super init];
         [self createSubviews];
-        [self setNeedsUpdateConstraints];
     }
+    self.alphaView = [[UIView alloc] init];
+    self.alphaView.backgroundColor = [UIColor blackColor];
+    self.alphaView.alpha = 0.3;
+    [self addSubview:self.alphaView];
+    [self sendSubviewToBack:self.alphaView];
+
+    
     self.bgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"city_background.png"]];
     [self addSubview:_bgView];
     [self sendSubviewToBack:_bgView];
+
     self.delegate = delegate;
     self.messageLabel.delegate = delegate;
     self.searchTextField.delegate = delegate;
+    [self setNeedsUpdateConstraints];
+
     return self;
 }
 
 - (void)createSubviews {
-    
-    self.backgroundColor = [UIColor whiteColor];
     
     _messageLabel = [[UITextField alloc] init];
     _messageLabel.textColor = [UIColor blackColor];
@@ -41,15 +48,14 @@
     [self addSubview:_messageLabel];
     
     _recordButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [_recordButton setTitle:@"record button" forState:UIControlStateNormal];
+    [_recordButton setBackgroundImage:[UIImage imageNamed:@"siri.png"] forState:UIControlStateNormal];
+//    [_recordButton setBackgroundImage:[UIImage imageNamed:@"siri.png"] forState:UICon];
     [_recordButton addTarget:self.delegate action:@selector(recordButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_recordButton];
     
     _searchTextField = [[UITextField alloc] init];
     _searchTextField.text = @"search";
-    _searchTextField.textColor = [UIColor blackColor];
-    _searchTextField.layer.borderColor = [[UIColor blackColor] CGColor];
-    _searchTextField.layer.borderWidth = 1.0f;
+    _searchTextField.textColor = [UIColor whiteColor];
     [self addSubview:_searchTextField];
     
     _progressBar = [[YLProgressBar alloc] init];
@@ -83,24 +89,28 @@
         make.bottom.equalTo(@0);
         make.left.equalTo(@0);
     }];
+    [_alphaView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@0);
+        make.right.equalTo(@0);
+        make.bottom.equalTo(@0);
+        make.left.equalTo(@0);
+    }];
     
     [_messageLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(@60);
         make.centerX.equalTo(@0);
-        make.width.equalTo(@200);
     }];
     
     [_recordButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.messageLabel.mas_bottom).with.offset(20);
         make.centerX.equalTo(@0);
-        make.width.equalTo(@200);
+        make.width.equalTo(@150);
+        make.height.equalTo(@150);
     }];
     
     [_searchTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.recordButton.mas_bottom).with.offset(20);
         make.centerX.equalTo(@0);
-        make.left.equalTo(@10);
-        make.width.equalTo(@300);
     }];
     
     [_progressBar mas_makeConstraints:^(MASConstraintMaker *make) {

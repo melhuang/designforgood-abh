@@ -12,5 +12,5 @@
 @interface ABHFoodViewController : UIViewController <SpeechKitDelegate, SKRecognizerDelegate>
 
 @property (strong, nonatomic) SKRecognizer* voiceSearch;
-
+- (void)recordButtonTapped:(id)sender;
 @end

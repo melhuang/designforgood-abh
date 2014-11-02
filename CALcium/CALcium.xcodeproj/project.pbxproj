@@ -11,7 +11,6 @@
 		BA2C17371A05AE510036F614 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C17361A05AE510036F614 /* main.m */; };
 		BA2C173A1A05AE510036F614 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C17391A05AE510036F614 /* AppDelegate.m */; };
 		BA2C17421A05AE510036F614 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA2C17411A05AE510036F614 /* Images.xcassets */; };
-		BA2C17451A05AE510036F614 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA2C17431A05AE510036F614 /* LaunchScreen.xib */; };
 		BA2C17511A05AE510036F614 /* CALciumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C17501A05AE510036F614 /* CALciumTests.m */; };
 		BA2C175C1A05B16E0036F614 /* ABHRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C175B1A05B16E0036F614 /* ABHRootViewController.m */; };
 		BA2C17601A05B2470036F614 /* ABHRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C175F1A05B2470036F614 /* ABHRootView.m */; };
@@ -50,7 +49,6 @@
 		BA2C17381A05AE510036F614 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BA2C17391A05AE510036F614 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BA2C17411A05AE510036F614 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BA2C17441A05AE510036F614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BA2C174A1A05AE510036F614 /* CALciumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CALciumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2C174F1A05AE510036F614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA2C17501A05AE510036F614 /* CALciumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALciumTests.m; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 				BA2C17381A05AE510036F614 /* AppDelegate.h */,
 				BA2C17391A05AE510036F614 /* AppDelegate.m */,
 				BA2C17411A05AE510036F614 /* Images.xcassets */,
-				BA2C17431A05AE510036F614 /* LaunchScreen.xib */,
 				BA2C17341A05AE510036F614 /* Supporting Files */,
 			);
 			path = CALcium;
@@ -299,7 +296,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA2C176D1A05E3610036F614 /* earcon_cancel.wav in Resources */,
-				BA2C17451A05AE510036F614 /* LaunchScreen.xib in Resources */,
 				BA2C176F1A05E3610036F614 /* earcon_listening.wav in Resources */,
 				BA2C176E1A05E3610036F614 /* earcon_done_listening.wav in Resources */,
 				BA2C17421A05AE510036F614 /* Images.xcassets in Resources */,
@@ -379,17 +375,6 @@
 			targetProxy = BA2C174B1A05AE510036F614 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		BA2C17431A05AE510036F614 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BA2C17441A05AE510036F614 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BA2C17521A05AE510036F614 /* Debug */ = {
@@ -475,11 +460,14 @@
 			baseConfigurationReference = 233086640F13F532F6388F10 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/melissahuang/Documents/Blueprint/DragonMobileSDK_1.4.12/DragonMobileVocalizer,
 				);
 				INFOPLIST_FILE = CALcium/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -500,11 +488,14 @@
 			baseConfigurationReference = BA99F566CD5C9AD73B6B0ADA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/melissahuang/Documents/Blueprint/DragonMobileSDK_1.4.12/DragonMobileVocalizer,
 				);
 				INFOPLIST_FILE = CALcium/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",

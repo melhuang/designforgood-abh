@@ -118,8 +118,17 @@ const unsigned char SpeechKitApplicationKey[] = {0x59, 0xad, 0xf3, 0x73, 0xfe, 0
         calcium = 2000;
     }
     self.calciumTotal += calcium;
+    
+    NSString *calcString = [[NSNumber numberWithFloat:calcium] stringValue];
+    calcString = [calcString stringByAppendingString:@" mg"];
+    
+    
+    self.view.amount.text = calcString;
+    
+    
     if (self.calciumTotal > self.RDA) {
         ABHCongratsViewController *congratsViewController = [[ABHCongratsViewController alloc] init];
+        congratsViewController.RDA = self.RDA;
         [self presentViewController:congratsViewController animated:YES completion:nil];
     }
     [self.view.progressBar setProgress:(self.calciumTotal / self.RDA) animated:YES];

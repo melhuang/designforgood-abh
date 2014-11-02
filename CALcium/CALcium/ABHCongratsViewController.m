@@ -21,7 +21,8 @@
 }
 
 - (void)loadView {
-    self.view = [[ABHCongratsView alloc] init];
+    ABHCongratsView *congratsView = [[ABHCongratsView alloc] initWithRDA:self.RDA];
+    self.view = congratsView;
 
 }
 

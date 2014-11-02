@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ABHCongratsView : UIView
+@property (nonatomic) float RDA;
 
+- (id)initWithRDA:(float)rda;
 @end

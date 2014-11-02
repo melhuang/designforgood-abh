@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ABHCongratsViewController : UIViewController
+@property (nonatomic) float RDA;
 
 @end

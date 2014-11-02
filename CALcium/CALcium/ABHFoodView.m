@@ -58,6 +58,12 @@
     _searchTextField.textColor = [UIColor whiteColor];
     [self addSubview:_searchTextField];
     
+    _amount = [[UILabel alloc] init];
+    _amount.text = @"";
+    _amount.font = [UIFont fontWithName:@"Helvetica" size:25];
+    _amount.textColor = [UIColor whiteColor];
+    [self addSubview:_amount];
+    
     _totalRDA = [[UILabel alloc] init];
     NSString *stringRDA = @"Total RDA: ";
     stringRDA = [stringRDA stringByAppendingString:[[NSNumber numberWithFloat:self.delegate.RDA] stringValue]];
@@ -118,6 +124,11 @@
     
     [_searchTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.recordButton.mas_bottom).with.offset(20);
+        make.centerX.equalTo(@0);
+    }];
+    
+    [_amount mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.searchTextField.mas_bottom).with.offset(15);
         make.centerX.equalTo(@0);
     }];
     

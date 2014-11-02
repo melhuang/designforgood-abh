@@ -20,6 +20,7 @@
 @property (nonatomic) UIView *alphaView;
 @property (nonatomic) YLProgressBar *progressBar;
 @property (nonatomic) UILabel *totalRDA;
+@property (nonatomic) UILabel *amount;
 
 - (id)initWithDelegate:(id<UITextFieldDelegate>)delegate;
 

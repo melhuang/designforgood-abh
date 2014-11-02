@@ -1,13 +1,16 @@
 PODS:
   - Masonry (0.5.3)
   - MDCSwipeToChoose (0.2.1)
+  - YLProgressBar (3.2.0)
 
 DEPENDENCIES:
   - Masonry
   - MDCSwipeToChoose
+  - YLProgressBar
 
 SPEC CHECKSUMS:
   Masonry: 35368c2ca9577ca87722c12fc52c4bad9b1c1516
   MDCSwipeToChoose: 54f7b1675eff182cdc46c582360c7fca4c766a67
+  YLProgressBar: 711d711ee592d2bed42aff2bc5a9b13a11a4ce7f
 
 COCOAPODS: 0.34.4

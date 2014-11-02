@@ -95,8 +95,6 @@ const unsigned char SpeechKitApplicationKey[] = {0x59, 0xad, 0xf3, 0x73, 0xfe, 0
 - (void)recognizer:(SKRecognizer *)recognizer didFinishWithError:(NSError *)error suggestion:(NSString *)suggestion {
     self.view.recordButton.selected = NO;
     self.view.messageLabel.text = @"Connection error";
-//    self.activityIndicator.hidden = YES;
-    
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
                                                     message:[error localizedDescription]

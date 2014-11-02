@@ -481,7 +481,7 @@
 					"\"Foundation\"",
 					"-framework",
 					"\"UIKit\"",
-					"\"",
+					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -509,7 +509,7 @@
 					"\"Foundation\"",
 					"-framework",
 					"\"UIKit\"",
-					"\"",
+					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

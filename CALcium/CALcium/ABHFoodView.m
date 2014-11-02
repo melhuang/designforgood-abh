@@ -22,7 +22,9 @@
         [self createSubviews];
         [self setNeedsUpdateConstraints];
     }
-    self.backgroundColor = [UIColor whiteColor];
+    self.bgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"city_background.png"]];
+    [self addSubview:_bgView];
+    [self sendSubviewToBack:_bgView];
     self.delegate = delegate;
     self.messageLabel.delegate = delegate;
     self.searchTextField.delegate = delegate;
@@ -50,8 +52,11 @@
     _searchTextField.layer.borderWidth = 1.0f;
     [self addSubview:_searchTextField];
     
+    _progressBar = [[YLProgressBar alloc] init];
     _progressBar.type                     = YLProgressBarTypeFlat;
-    _progressBar.hideStripes              = YES;
+    _progressBar.hideGloss                = NO;
+    _progressBar.hideStripes              = NO;
+    _progressBar.layer.cornerRadius = 10;
     _progressBar.indicatorTextDisplayMode = YLProgressBarIndicatorTextDisplayModeProgress;
     _progressBar.progressTintColors       = @[[UIColor colorWithRed:33/255.0f green:180/255.0f blue:162/255.0f alpha:1.0f],
                                               [UIColor colorWithRed:3/255.0f green:137/255.0f blue:166/255.0f alpha:1.0f],
@@ -64,11 +69,21 @@
                                               [UIColor colorWithRed:165/255.0f green:202/255.0f blue:60/255.0f alpha:1.0f],
                                               [UIColor colorWithRed:202/255.0f green:217/255.0f blue:54/255.0f alpha:1.0f],
                                               [UIColor colorWithRed:111/255.0f green:188/255.0f blue:84/255.0f alpha:1.0f]];
+    
+    _progressBar.progress = 0.2f;
+    
     [self addSubview:_progressBar];
 }
 
 
 - (void)updateConstraints {
+    [_bgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@0);
+        make.right.equalTo(@0);
+        make.bottom.equalTo(@0);
+        make.left.equalTo(@0);
+    }];
+    
     [_messageLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(@60);
         make.centerX.equalTo(@0);
@@ -89,11 +104,13 @@
     }];
     
     [_progressBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.searchTextField.mas_bottom).with.offset(40);
+        make.bottom.equalTo(@-40);
         make.centerX.equalTo(@0);
         make.width.equalTo(@300);
+        make.height.equalTo(@20);
     }];
-    
+    _progressBar.layer.cornerRadius = 10;
+
     [super updateConstraints];
 }
 

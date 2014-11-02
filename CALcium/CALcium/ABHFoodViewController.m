@@ -74,6 +74,7 @@ const unsigned char SpeechKitApplicationKey[] = {0x59, 0xad, 0xf3, 0x73, 0xfe, 0
 
 - (void)recognizerDidFinishRecording:(SKRecognizer *)recognizer {
     self.view.messageLabel.text = @"Done Listening.";
+    [self.view.progressBar setProgress:0.7f animated:YES];
 }
 
 - (void)recognizer:(SKRecognizer *)recognizer didFinishWithResults:(SKRecognition *)results {

@@ -15,6 +15,7 @@
 @property (nonatomic) id delegate;
 @property (nonatomic) UIButton *recordButton;
 @property (nonatomic) UITextField *searchTextField;
+@property (nonatomic) UIImageView *bgView;
 @property (nonatomic) YLProgressBar *progressBar;
 
 - (id)initWithDelegate:(id<UITextFieldDelegate>)delegate;

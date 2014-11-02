@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ABHRootViewController.h"
+#import "ABHFoodViewController.h"
 
 @interface AppDelegate ()
 
@@ -35,7 +36,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    ABHRootViewController *rootViewController = [[ABHRootViewController alloc] init];
+    //    ABHRootViewController *rootViewController = [[ABHRootViewController alloc] init];
+    ABHFoodViewController *rootViewController = [[ABHFoodViewController alloc] init];
     self.window.rootViewController = rootViewController;
     
     [self.window makeKeyAndVisible];

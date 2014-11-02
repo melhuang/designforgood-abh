@@ -12,7 +12,7 @@
 @interface ABHFoodViewController : UIViewController <UITextFieldDelegate, SpeechKitDelegate, SKRecognizerDelegate>
 
 @property (strong, nonatomic) SKRecognizer* voiceSearch;
-@property (nonatomic) int RDA;
+@property (nonatomic) float RDA;
 @property (nonatomic) int calciumTotal;
 
 - (void)recordButtonTapped:(id)sender;

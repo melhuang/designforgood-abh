@@ -43,18 +43,18 @@
 - (void)createSubviews {
     
     _messageLabel = [[UITextField alloc] init];
-    _messageLabel.textColor = [UIColor blackColor];
+    _messageLabel.textColor = [UIColor whiteColor];
     _messageLabel.text = @"message label";
     [self addSubview:_messageLabel];
     
     _recordButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [_recordButton setBackgroundImage:[UIImage imageNamed:@"siri.png"] forState:UIControlStateNormal];
-//    [_recordButton setBackgroundImage:[UIImage imageNamed:@"siri.png"] forState:UICon];
     [_recordButton addTarget:self.delegate action:@selector(recordButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_recordButton];
     
     _searchTextField = [[UITextField alloc] init];
-    _searchTextField.text = @"search";
+    _searchTextField.text = @"temp";
+    _searchTextField.font = [UIFont fontWithName:@"Helvetica" size:30];
     _searchTextField.textColor = [UIColor whiteColor];
     [self addSubview:_searchTextField];
     
@@ -76,7 +76,7 @@
                                               [UIColor colorWithRed:202/255.0f green:217/255.0f blue:54/255.0f alpha:1.0f],
                                               [UIColor colorWithRed:111/255.0f green:188/255.0f blue:84/255.0f alpha:1.0f]];
     
-    _progressBar.progress = 0.2f;
+    _progressBar.progress = 0;
     
     [self addSubview:_progressBar];
 }

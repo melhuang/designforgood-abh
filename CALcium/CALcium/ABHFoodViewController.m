@@ -28,6 +28,7 @@ const unsigned char SpeechKitApplicationKey[] = {0x59, 0xad, 0xf3, 0x73, 0xfe, 0
     
     
     self.view.messageLabel.text = @"Tap on the mic";
+    self.calciumTotal = 0;
     
     self.appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
     [self.appDelegate setupSpeechKitConnection];
@@ -74,7 +75,28 @@ const unsigned char SpeechKitApplicationKey[] = {0x59, 0xad, 0xf3, 0x73, 0xfe, 0
 
 - (void)recognizerDidFinishRecording:(SKRecognizer *)recognizer {
     self.view.messageLabel.text = @"Done Listening.";
-    [self.view.progressBar setProgress:0.7f animated:YES];
+    NSString *food = self.view.searchTextField.text;
+    int calcium = 0;
+    if ([food isEqualToString:@"Low-fat yogurt"]) {
+        calcium = 350;
+    } else if ([food isEqualToString:@"Milk"]) {
+        calcium = 250;
+    } else if ([food isEqualToString:@"Cheese"]) {
+        calcium = 150;
+    } else if ([food isEqualToString:@"Pudding"]) {
+        calcium = 55;
+    } else if ([food isEqualToString:@"Tofu"]) {
+        calcium = 350;
+    } else if ([food isEqualToString:@"Vegetable lasagna"]) {
+        calcium = 350;
+    } else if ([food isEqualToString:@"Cheese enchilada"]) {
+        calcium = 225;
+    } else if ([food isEqualToString:@"Broccoli"]) {
+        calcium = 20;
+    }
+    self.calciumTotal += calcium;
+    
+    [self.view.progressBar setProgress:(self.calciumTotal / self.RDA) animated:YES];
 }
 
 - (void)recognizer:(SKRecognizer *)recognizer didFinishWithResults:(SKRecognition *)results {

@@ -162,6 +162,7 @@ UIButton *group6;
         }
     }
     ABHFoodViewController *foodViewController = [[ABHFoodViewController alloc] init];
+    foodViewController.RDA = self.RDA;
     [self.parent presentViewController:foodViewController animated:YES completion:nil];
 }
 

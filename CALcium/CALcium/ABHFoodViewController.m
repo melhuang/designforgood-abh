@@ -8,8 +8,12 @@
 
 #import "ABHFoodViewController.h"
 #import "ABHFoodView.h"
+#import "AppDelegate.h"
 
 @interface ABHFoodViewController ()
+
+@property (nonatomic) UILabel *messageLabel;
+@property (nonatomic) id appDelegate;
 
 @end
 
@@ -18,9 +22,22 @@ const unsigned char SpeechKitApplicationKey[] = {0x59, 0xad, 0xf3, 0x73, 0xfe, 0
 
 @implementation ABHFoodViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
+    self.messageLabel.text = @"Tap on the mic";
+//    self.activityIndicator.hidden = YES;
+//    
+//    if (!self.tableViewDisplayDataArray) {
+//        self.tableViewDisplayDataArray = [[NSMutableArray alloc] init];
+//    }
+    
+    self.appDelegate = (AppDelegate *)([UIApplication sharedApplication].delegate);
+    [self.appDelegate setupSpeechKitConnection];
+    
+//    self.searchTextField.returnKeyType = UIReturnKeySearch;
 }
 
 - (void)loadView {

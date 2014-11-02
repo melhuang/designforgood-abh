@@ -18,6 +18,17 @@
 		BA2C17641A05DA930036F614 /* ABHFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C17631A05DA930036F614 /* ABHFoodViewController.m */; };
 		BA2C17671A05DC2D0036F614 /* ABHFoodView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2C17661A05DC2D0036F614 /* ABHFoodView.m */; };
 		BA2C17691A05E0FA0036F614 /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2C17681A05E0FA0036F614 /* SpeechKit.framework */; };
+		BA2C176D1A05E3610036F614 /* earcon_cancel.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA2C176A1A05E3610036F614 /* earcon_cancel.wav */; };
+		BA2C176E1A05E3610036F614 /* earcon_done_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA2C176B1A05E3610036F614 /* earcon_done_listening.wav */; };
+		BA2C176F1A05E3610036F614 /* earcon_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA2C176C1A05E3610036F614 /* earcon_listening.wav */; };
+		BA2C17711A05E5850036F614 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2C17701A05E5850036F614 /* AVFoundation.framework */; };
+		BA2C17731A05E58D0036F614 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2C17721A05E58D0036F614 /* Foundation.framework */; };
+		BA2C17751A05E5940036F614 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2C17741A05E5940036F614 /* UIKit.framework */; };
+		BA2C17771A05E59B0036F614 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2C17761A05E59B0036F614 /* CoreGraphics.framework */; };
+		BA2C17791A05E5A20036F614 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2C17781A05E5A20036F614 /* AudioToolbox.framework */; };
+		BA2C177B1A05E5AA0036F614 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2C177A1A05E5AA0036F614 /* SystemConfiguration.framework */; };
+		BA2C177D1A05E5B10036F614 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2C177C1A05E5B10036F614 /* Security.framework */; };
+		BA2C177F1A05E5B80036F614 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2C177E1A05E5B80036F614 /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +63,17 @@
 		BA2C17651A05DC2D0036F614 /* ABHFoodView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABHFoodView.h; sourceTree = "<group>"; };
 		BA2C17661A05DC2D0036F614 /* ABHFoodView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABHFoodView.m; sourceTree = "<group>"; };
 		BA2C17681A05E0FA0036F614 /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechKit.framework; path = ../../DragonMobileSDK_1.4.12/DragonMobileVocalizer/SpeechKit.framework; sourceTree = "<group>"; };
+		BA2C176A1A05E3610036F614 /* earcon_cancel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = earcon_cancel.wav; path = ../../../DragonMobileSDK_1.4.12/DragonMobileRecognizer/earcon_cancel.wav; sourceTree = "<group>"; };
+		BA2C176B1A05E3610036F614 /* earcon_done_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = earcon_done_listening.wav; path = ../../../DragonMobileSDK_1.4.12/DragonMobileRecognizer/earcon_done_listening.wav; sourceTree = "<group>"; };
+		BA2C176C1A05E3610036F614 /* earcon_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = earcon_listening.wav; path = ../../../DragonMobileSDK_1.4.12/DragonMobileRecognizer/earcon_listening.wav; sourceTree = "<group>"; };
+		BA2C17701A05E5850036F614 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BA2C17721A05E58D0036F614 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BA2C17741A05E5940036F614 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BA2C17761A05E59B0036F614 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BA2C17781A05E5A20036F614 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BA2C177A1A05E5AA0036F614 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BA2C177C1A05E5B10036F614 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BA2C177E1A05E5B80036F614 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		BA99F566CD5C9AD73B6B0ADA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +82,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA2C177F1A05E5B80036F614 /* CFNetwork.framework in Frameworks */,
+				BA2C177D1A05E5B10036F614 /* Security.framework in Frameworks */,
+				BA2C177B1A05E5AA0036F614 /* SystemConfiguration.framework in Frameworks */,
+				BA2C17791A05E5A20036F614 /* AudioToolbox.framework in Frameworks */,
+				BA2C17771A05E59B0036F614 /* CoreGraphics.framework in Frameworks */,
+				BA2C17751A05E5940036F614 /* UIKit.framework in Frameworks */,
+				BA2C17731A05E58D0036F614 /* Foundation.framework in Frameworks */,
+				BA2C17711A05E5850036F614 /* AVFoundation.framework in Frameworks */,
 				BA2C17691A05E0FA0036F614 /* SpeechKit.framework in Frameworks */,
 				3981BFD9C9ED21BE184BFE1F /* libPods.a in Frameworks */,
 			);
@@ -121,6 +151,9 @@
 		BA2C17341A05AE510036F614 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BA2C176A1A05E3610036F614 /* earcon_cancel.wav */,
+				BA2C176B1A05E3610036F614 /* earcon_done_listening.wav */,
+				BA2C176C1A05E3610036F614 /* earcon_listening.wav */,
 				BA2C17351A05AE510036F614 /* Info.plist */,
 				BA2C17361A05AE510036F614 /* main.m */,
 			);
@@ -169,6 +202,14 @@
 		EC91CEB433F060E3CC34B53E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA2C177E1A05E5B80036F614 /* CFNetwork.framework */,
+				BA2C177C1A05E5B10036F614 /* Security.framework */,
+				BA2C177A1A05E5AA0036F614 /* SystemConfiguration.framework */,
+				BA2C17781A05E5A20036F614 /* AudioToolbox.framework */,
+				BA2C17761A05E59B0036F614 /* CoreGraphics.framework */,
+				BA2C17741A05E5940036F614 /* UIKit.framework */,
+				BA2C17721A05E58D0036F614 /* Foundation.framework */,
+				BA2C17701A05E5850036F614 /* AVFoundation.framework */,
 				BA2C17681A05E0FA0036F614 /* SpeechKit.framework */,
 				63CF5CF9A2A220EA12DDF1B9 /* libPods.a */,
 			);
@@ -257,7 +298,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA2C176D1A05E3610036F614 /* earcon_cancel.wav in Resources */,
 				BA2C17451A05AE510036F614 /* LaunchScreen.xib in Resources */,
+				BA2C176F1A05E3610036F614 /* earcon_listening.wav in Resources */,
+				BA2C176E1A05E3610036F614 /* earcon_done_listening.wav in Resources */,
 				BA2C17421A05AE510036F614 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +481,16 @@
 				);
 				INFOPLIST_FILE = CALcium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"Pods-MDCSwipeToChoose\"",
+					"-l\"Pods-Masonry\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"UIKit\"",
+					"\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -452,6 +506,16 @@
 				);
 				INFOPLIST_FILE = CALcium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"Pods-MDCSwipeToChoose\"",
+					"-l\"Pods-Masonry\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"UIKit\"",
+					"\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

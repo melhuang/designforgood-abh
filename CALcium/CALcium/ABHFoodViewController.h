@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SpeechKit/SpeechKit.h>
 
-@interface ABHFoodViewController : UIViewController
+@interface ABHFoodViewController : UIViewController <SpeechKitDelegate, SKRecognizerDelegate>
+
+@property (strong, nonatomic) SKRecognizer* voiceSearch;
 
 @end

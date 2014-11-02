@@ -119,7 +119,6 @@
         make.width.equalTo(@300);
         make.height.equalTo(@20);
     }];
-    _progressBar.layer.cornerRadius = 10;
 
     [super updateConstraints];
 }

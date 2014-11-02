@@ -153,7 +153,7 @@ UIButton *group6;
                     self.RDA = 1200;
                 }
             }
-        } else if (before == '1') {
+        } else if (before == '4') {
             if ([sender.titleLabel.text characterAtIndex:hypenIndex - 2] != '1') {
                 self.RDA = 1000; //4-8
             } else {

@@ -182,7 +182,7 @@ UIButton *group6;
     
     [group1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(intro.mas_bottom).with.offset(15);
-        make.left.equalTo(@90);
+        make.left.equalTo(@70);
         make.width.equalTo(group4.mas_width);
     }];
 
